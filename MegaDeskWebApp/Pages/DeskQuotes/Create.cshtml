@@ -35,24 +35,37 @@
             </div>
             <div class="form-group">
                 <label asp-for="DeskQuote.DesktopMaterial" class="control-label"></label>
-                <input asp-for="DeskQuote.DesktopMaterial" class="form-control" />
+                <select asp-for="DeskQuote.DesktopMaterial">
+                    <option value="">Select desctop material</option>
+                    <option value="Oak">Oak</option>
+                    <option value="Laminate">Laminate</option>
+                    <option value="Pine">Pine</option>
+                    <option value="Rosewood">Rosewood</option>
+                    <option value="Veneer">Veneer</option>
+                </select>
                 <span asp-validation-for="DeskQuote.DesktopMaterial" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="DeskQuote.RushOrder" class="control-label"></label>
-                <input asp-for="DeskQuote.RushOrder" class="form-control" />
+                <select asp-for="DeskQuote.RushOrder">
+                    <option value="">Select rush order</option>
+                    <option value="3">3</option>
+                    <option value="5">5</option>
+                    <option value="7">7</option>
+                    <option value="14">14</option>
+                </select>
                 <span asp-validation-for="DeskQuote.RushOrder" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="DeskQuote.DeskQuoteDate" class="control-label"></label>
-                <input asp-for="DeskQuote.DeskQuoteDate" class="form-control" />
-                <span asp-validation-for="DeskQuote.DeskQuoteDate" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="DeskQuote.DeskQuotePrice" class="control-label"></label>
-                <input asp-for="DeskQuote.DeskQuotePrice" class="form-control" />
-                <span asp-validation-for="DeskQuote.DeskQuotePrice" class="text-danger"></span>
-            </div>
+            <!--<div class="form-group">
+            <label asp-for="DeskQuote.DeskQuoteDate" class="control-label"></label>
+            <input asp-for="DeskQuote.DeskQuoteDate" class="form-control" />
+            <span asp-validation-for="DeskQuote.DeskQuoteDate" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="DeskQuote.DeskQuotePrice" class="control-label"></label>
+            <input asp-for="DeskQuote.DeskQuotePrice" class="form-control" />
+            <span asp-validation-for="DeskQuote.DeskQuotePrice" class="text-danger"></span>
+        </div>-->
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>

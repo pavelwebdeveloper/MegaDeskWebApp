@@ -2,10 +2,10 @@
 @model MegaDeskWebApp.Pages.DeskQuotes.IndexModel
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "DeskQuotes";
 }
 
-<h1>Index</h1>
+<h1>Desk Quotes</h1>
 
 <p>
     <a asp-page="Create">Create New</a>
@@ -14,7 +14,9 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.DeskQuote[0].CustomerName)
+                <a asp-page="./Index" asp-route-sortOrder="@Model.NameSort">
+                    @Html.DisplayNameFor(model => model.DeskQuote[0].CustomerName)
+                </a>
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.DeskQuote[0].DeskWidth)
@@ -32,7 +34,9 @@
                 @Html.DisplayNameFor(model => model.DeskQuote[0].RushOrder)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.DeskQuote[0].DeskQuoteDate)
+                <a asp-page="./Index" asp-route-sortOrder="@Model.DateSort">
+                    @Html.DisplayNameFor(model => model.DeskQuote[0].DeskQuoteDate)
+                </a>
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.DeskQuote[0].DeskQuotePrice)
